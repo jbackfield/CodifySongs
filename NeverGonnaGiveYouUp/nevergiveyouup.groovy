@@ -1,12 +1,14 @@
 def Never = false
 
+def Gonna = { value -> { -> value }}
+
 class RickAstley {
-  def giveYouUp(val) { }
-  def letYouDown(val) { }
-  def runAroundAndDesertYou(val) { }
-  def makeYouCry(val) { }
-  def sayGoodby(val) { }
-  def tellALieAndHurtYou(val) { }
+  def giveYouUp = {f -> this.giveYouUp = f }
+  def letYouDown = {f -> this.letYouDown = f }
+  def runAroundAndDesertYou = {f -> this.runAroundAndDesertYou = f }
+  def makeYouCry = {f -> this.makeYouCry = f }
+  def sayGoodbye = {f -> this.sayGoodbye = f }
+  def tellALieAndHurtYou = {f -> this.tellALieAndHurtYou = f }
   static def is(block) {
     def ra = new RickAstley()
     ra.with block
@@ -14,10 +16,10 @@ class RickAstley {
 }
 
 RickAstley.is {
-  giveYouUp Never
-  letYouDown Never
-  runAroundAndDesertYou Never
-  makeYouCry Never
-  sayGoodby Never
-  tellALieAndHurtYou Never
+  giveYouUp Gonna (Never)
+  letYouDown Gonna (Never)
+  runAroundAndDesertYou Gonna (Never)
+  makeYouCry Gonna (Never)
+  sayGoodbye Gonna (Never)
+  tellALieAndHurtYou Gonna (Never)
 }

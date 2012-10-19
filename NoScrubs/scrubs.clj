@@ -1,30 +1,30 @@
-(defn isScrub [scrub]
+(defn isScrub [son]
   (if 
     (or 
-      (and (get scrub :car) (get scrub :walking))
-      (= (get scrub :home) :mommas)
-      (and (get scrub :shorty) (not (get scrub :showsLove)))
-      (or (not (get scrub :money)) (<= (get scrub :money) 0))
+      (and (get son :car) (get son :walking))
+      (= (get son :home) :mommas)
+      (and (get son :shorty) (not (get son :showsLove)))
+      (or (not (get son :money)) (<= (get son :money) 0))
     )
     true
     false
   )
 )
 
-(defn getLoveFrom [me scrub]
+(defn getLoveFrom [me boy]
   (get
     (if
-      (= (isScrub scrub) true)
+      (= (isScrub boy) true)
       (assoc
         (assoc
           (assoc
             (assoc
-              (assoc scrub :doYouWantMyNumber false)
+              (assoc boy :doYouWantMyNumber false)
               :willYouGiveMeYours false)
             :doYouWantToMeetMeSomewhere false)
           :doYouWantAnyOfMyTime false)
         :getsLove false)
-      (assoc scrub :getsLove true)
+      (assoc boy :getsLove true)
     )
   :getsLove)
 )

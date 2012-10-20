@@ -4,16 +4,10 @@ def gotta = new You()
 def you = {f -> f}
 
 class You {
-  def bad = false
-  def bold = false
-  def wiser = false
-  def hard = false
-  def tough = false
-  def stronger = false
-  def cool = false
-  def calm = false
+  private def properties = [:]
+  def propertyMissing(String name, value) { this.properties[name] = value; }
+  def propertyMissing(String name) { this.properties[name] = true; }
   def stay = { b -> this.stay = b }
-
   def be = { block -> this.with block }
 }
 

@@ -5,4 +5,5 @@ Seriously, this is just fun.  I'm taking some songs and rewriting them into code
 <tr><td>NoScrubs/</td><td>No Scrubs</td><td>TLC</td><td>Clojure</td></tr>
 <tr><td>Low/</td><td>Low</td><td>Flo Rida</td><td>Scala</td></tr>
 <tr><td>NeverGonnaGiveYouUp/</td><td>Never Gonna Give You Up</td><td>Rick Astley</td><td>Groovy</td></tr>
+<tr><td>YouGottaBe/</td><td>You Gotta Be</td><td>Des'ree</td><td>Groovy</td></tr>
 </table>
